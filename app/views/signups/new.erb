@@ -1,0 +1,15 @@
+<h1>Sign up here:</h1>
+
+<%=form_for @signup do |form_helper|  %>
+<%=form_helper.label :camper_id, "Camper" %>
+<%=form_helper.collection_select :camper_id, @campers, :id, :name %>
+<br/>
+<%=form_helper.label :activity_id, "Activity" %>
+<%=form_helper.collection_select :activity_id, @activities, :id, :name %>
+<br/>
+
+<%# <%=form_helper.label :time, "Time" %> 
+<%# <%=form_helper.collection_select :time, @times, :id, :time  %> 
+
+<% end %>
+
